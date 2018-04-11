@@ -2,14 +2,20 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+body {
+   color: white;
+}
+
 .startPage {
-   background: yellow;
+   background: darkCyan;
+   height: 100vh;
 }
 
 .questionPage {
    background: orange;
+   height: 100vh;
 }
 
 .gameOver{
-   background: lightblue;
+   background: darkcyan;
 }
