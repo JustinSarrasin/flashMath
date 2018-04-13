@@ -2,7 +2,7 @@
 const freakMath = {};
 
 // starting score of player 
-freakMath.score = 0;
+freakMath.score = -1;
 
 // starting number of questions produced
 freakMath.counter = 0;
@@ -120,16 +120,14 @@ freakMath.hideQuestionPage = () => {
 
 }
 
-// freakMath.getInfo = () => {
-//    // freakMath.getQuestion(results[freakMath.counter].question);
-//    // freakMath.getAnswer(results[freakMath.counter].answer)
-//    // freakMath.questionPage();
-// }
-
 // question page
 freakMath.questionPage = () => {
    $('.start').on('click', function (e) {
       e.preventDefault();
+
+   clearInterval(freakMath.timerId);
+   freakMath.timerId = setInterval(freakMath.timer, 1000);
+  
    freakMath.counter = freakMath.counter + 1;
 
    freakMath.getQuestion(results[freakMath.counter].question);
@@ -145,11 +143,6 @@ freakMath.getQuestion = (question) => {
    // freakMath.counter;
    console.log(freakMath.counter);
 }
-
-// const currentQuestion = (results[freakMath.counter].question);
-
-// const currentAnswer = (results[freakMath.counter].answer);
-
 
 freakMath.getAnswer = (answer) => {
    // let clicked = false;
@@ -168,11 +161,19 @@ freakMath.getAnswer = (answer) => {
       let currentAnswer = (results[freakMath.counter].answer);
 
       if (currentAnswer === true) {
+         freakMath.addScore();
          // console.log('correct');
          console.log('giddyup')
       } else {
+         freakMath.hideQuestionPage();
          console.log('nope');
       }
+
+      freakMath.counter = freakMath.counter + 1;
+
+      freakMath.getQuestion(results[freakMath.counter].question);
+      freakMath.getAnswer(results[freakMath.counter].answer)
+   
       
 
       console.log('clicked');
@@ -180,7 +181,7 @@ freakMath.getAnswer = (answer) => {
 
    $('.wrong').off().on('click', function (e) {
       e.preventDefault();
-      clicked = true;
+      // clicked = true;
       // console.log(clicked)
 
       let currentQuestion = (results[freakMath.counter].question);
@@ -195,43 +196,47 @@ freakMath.getAnswer = (answer) => {
          alert('nope');
       }
 
+      freakMath.counter = freakMath.counter + 1;
+
+      freakMath.getQuestion(results[freakMath.counter].question);
+      freakMath.getAnswer(results[freakMath.counter].answer)
+   
+
       console.log('clicked');
    })
    console.log(answer)  
 }
 
-// freakMath.nextQuestion = () => {
-
+// triviaApp.countdown = 21;
+// triviaApp.timer = function () {
+//    if (triviaApp.countdown === 0) {
+//       clearInterval(triviaApp.timerId);
+//       swal("Oh No!!", "Out Of Time")
+//    } else {
+//       triviaApp.countdown--;
+//       $('.mycounter').html(`<h3>` + triviaApp.countdown + `</h3>`);
+//    }
 // }
-
-
-
-
-// freakMath.correct = (question) => {
-
-// } 
-
-
-// freakMath.wrong = (wrong) => {
-//    // $('.wrong').on('click', function() {
-//    //    if( === false) {
-//    //       console.log('correct');
-//    //    } else {
-//    //       console.log('wrong');
-//    //    }
-//    // })
-// }
-
 // question timer
+freakMath.countdown = 3;
 freakMath.timer = () => {
-
+   if(freakMath.countdown === 0){
+      clearInterval(freakMath.timerID);
+      freakMath.hideQuestionPage();
+   } else {
+      $('.runningTime').empty(freakMath.countdown);
+      $('.runningTime').append(freakMath.countdown);
+      freakMath.countdown--;
+   }
 }
 
 
 // add score for every correct answer
 freakMath.addScore = () => {
    freakMath.score++;
-   // console.log(freakMath.score);
+   console.log(freakMath.score);
+   $('.runningScore').empty(freakMath.score);
+   $('.runningScore').append("Score:" + freakMath.score);
 }
 
 // toggle sound option on question page 
@@ -248,6 +253,7 @@ freakMath.toggleSound = () => {
 freakMath.init = () => {
    freakMath.start();
    freakMath.questionPage();
+   freakMath.timer();
    // freakMath.getInfo();
    freakMath.hideQuestionPage();
    // freakMath.nextQuestion();

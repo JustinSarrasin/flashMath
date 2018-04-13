@@ -19,3 +19,7 @@ body {
 .gameOver{
    background: darkcyan;
 }
+
+h2 {
+   margin-top: 0;
+}
