@@ -61,7 +61,6 @@ const results = [
          question: "10 + 2 = 11",
          answer: false
       },
-      
       {
          question: "8 + 1 = 9",
          answer: true
@@ -145,6 +144,142 @@ const results = [
       {
          question: "9 + 2 = 12",
          answer: true
+      },
+      {
+         question: "15 + 2 = 11",
+         answer: false
+      },
+      {
+         question: "14 + 4 = 14",
+         answer: false
+      },
+      {
+         question: "8 + 2 = 10",
+         answer: true
+      },
+      {
+         question: "3 + 2 = 3",
+         answer: false
+      },
+      {
+         question: "5 + 4 = 9",
+         answer: true
+      },
+      {
+         question: "8 - 4 = 4",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 8",
+         answer: false
+      },
+      {
+         question: "3 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "10 - 2 = 8",
+         answer: true
+      },
+      {
+         question: "1 - 1 = 0",
+         answer: true
+      },
+      {
+         question: "7 + 2= 9",
+         answer: true
+      },
+      {
+         question: "9 + 2 = 15",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 11",
+         answer: false
+      },
+      {
+         question: "8 + 1 = 9",
+         answer: true
+      },
+      {
+         question: "5 + 3 = 8",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 6",
+         answer: true
+      },
+      {
+         question: "10 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 12",
+         answer: true
+      },
+      {
+         question: "2 - 2 = 4",
+         answer: false
+      },
+      {
+         question: "10 + 4 = 14",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "2 + 4 = 4",
+         answer: false
+      },
+      {
+         question: "4 + 3 = 4",
+         answer: false
+      },
+      {
+         question: "8 - 2 = 6",
+         answer: true
+      },
+      {
+         question: "10 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 12",
+         answer: true
+      },
+      {
+         question: "2 + 2 = 4",
+         answer: true
+      },
+      {
+         question: "10 + 4 = 14",
+         answer: true
+      },
+      {
+         question: "8 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "2 + 1 = 4",
+         answer: false
+      },
+      {
+         question: "3 + 3 = 4",
+         answer: false
+      },
+      {
+         question: "4 + 2 = 6",
+         answer: true
+      },
+      {
+         question: "14 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "17 + 2 = 17",
+         answer: false
       }
    ] 
 
@@ -189,49 +324,34 @@ freakMath.getQuestion = (question) => {
    console.log(freakMath.counter);
 }
 
+// repeats questions and handles click methods to bring new question
 freakMath.getAnswer = (answer) => {
-   // let clicked = false;
-   // function clickHandler(){
-   //    clicked = true;
-   // }
-   
-   
    $('.correct').off().on('click', function (e) {
       e.preventDefault();
-      // clicked = true;
-      // console.log(clicked)
+
       let currentQuestion = (results[freakMath.counter].question);
-      // console.log(currentQuestion)
 
       let currentAnswer = (results[freakMath.counter].answer);
 
+      // checks to see if answer is correct and adds point to score
       if (currentAnswer === true) {
          freakMath.addScore();
-
+         // timer countdown
          freakMath.countdown = 3;
          clearInterval(freakMath.timerID);
-         // console.log('correct');
-         console.log('giddyup')
       } else {
          freakMath.hideQuestionPage();
          $('.gameOver').show();
-         console.log('nope');
       }
 
       freakMath.counter = freakMath.counter + 1;
 
       freakMath.getQuestion(results[freakMath.counter].question);
       freakMath.getAnswer(results[freakMath.counter].answer)
-   
-      
-
-      console.log('clicked');
    })
 
    $('.wrong').off().on('click', function (e) {
       e.preventDefault();
-      // clicked = true;
-      // console.log(clicked)
 
       let currentQuestion = (results[freakMath.counter].question);
 
@@ -243,7 +363,6 @@ freakMath.getAnswer = (answer) => {
 
          freakMath.countdown = 3;
          clearInterval(freakMath.timerID);
-         // console.log('giddyuasdfp')
       } else {
          freakMath.hideQuestionPage();
          $('.gameOver').show();
@@ -253,11 +372,7 @@ freakMath.getAnswer = (answer) => {
 
       freakMath.getQuestion(results[freakMath.counter].question);
       freakMath.getAnswer(results[freakMath.counter].answer)
-   
-
-      console.log('clicked');
-   })
-   console.log(answer)  
+   })  
 }
 
 // question timer
@@ -294,17 +409,9 @@ freakMath.init = () => {
    freakMath.start();
    freakMath.questionPage();
    freakMath.timer();
-   // freakMath.getInfo();
    freakMath.hideQuestionPage();
    freakMath.hideResultPage();
-   // freakMath.nextQuestion();
-   // freakMath.getQuestion();
-   // freakMath.getAnswer();
-   // freakMath.showQuestion();
-   // freakMath.queueNextQuestion();
-   // freakMath.correct();
    freakMath.addScore();
-   // freakMath.wrong();
 }
 
 // Document ready function

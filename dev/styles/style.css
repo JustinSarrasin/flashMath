@@ -6,6 +6,7 @@ body {
    color: white;
    text-align: center;
    letter-spacing: 1px;
+   font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -18,8 +19,6 @@ body {
 button {
    padding: 20px 60px;
    font-size: 45px;
-   background: white;
-   color: black;
 }
 
 /* start page styling */
@@ -52,10 +51,6 @@ h1{
 
 
 /* question page styling */
-.questionContainer{
-   /* padding: 10px 0; */
-}
-
 .questionContainer button {
    margin: 5px 0 0;
 }
@@ -63,7 +58,6 @@ h1{
 .tally {
    display: flex;
    justify-content: space-between;
-   /* font-size: 20px; */
 }
 
 p {
@@ -89,10 +83,6 @@ p {
    color: black;
    padding: 22px;
 }
-
-/* .correct button, .wrong, .start {
-   background: white;
-} */
 
 .correct:hover, .wrong:hover{
    background: black;
@@ -146,9 +136,3 @@ a {
    text-decoration: none;
    color: black;
 }
-
-
-
-
-
-
