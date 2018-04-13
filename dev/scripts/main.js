@@ -260,16 +260,6 @@ freakMath.getAnswer = (answer) => {
    console.log(answer)  
 }
 
-// triviaApp.countdown = 21;
-// triviaApp.timer = function () {
-//    if (triviaApp.countdown === 0) {
-//       clearInterval(triviaApp.timerId);
-//       swal("Oh No!!", "Out Of Time")
-//    } else {
-//       triviaApp.countdown--;
-//       $('.mycounter').html(`<h3>` + triviaApp.countdown + `</h3>`);
-//    }
-// }
 // question timer
 freakMath.countdown = 3;
 freakMath.timer = () => {
@@ -279,7 +269,7 @@ freakMath.timer = () => {
       $('.gameOver').show();
    } else {
       $('.runningTime').empty(freakMath.countdown);
-      $('.runningTime').append(freakMath.countdown);
+      $('.runningTime').append("Timer:" +freakMath.countdown);
       freakMath.countdown--;
    }
 }
@@ -297,10 +287,6 @@ freakMath.addScore = () => {
 freakMath.toggleSound = () => {
 
 }
-
-
-
-
 
 
 // Init function

@@ -5,6 +5,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 body {
    color: white;
    text-align: center;
+   letter-spacing: 1px;
 }
 
 .wrapper {
@@ -14,9 +15,66 @@ body {
    justify-content: center;
 }
 
+button {
+   padding: 20px 60px;
+   font-size: 45px;
+   background: white;
+   color: black;
+}
+
+/* start page styling */
+h1{
+   font-size: 60px;
+}
+
+.title h2 {
+   font-size: 40px;
+   border: 2px solid black;
+   background: white;
+   color: black;
+   margin-top: 0;
+}
+
 .startPage {
    background: darkCyan;
    height: 100vh;
+}
+
+.startButtons button {
+   background: white;
+   color: black;
+}
+
+.startButtons button:hover {
+   background: black;
+   color: white;
+}
+
+
+/* question page styling */
+.questionContainer{
+   /* padding: 10px 0; */
+}
+
+.questionContainer button {
+   margin: 5px 0 0;
+}
+
+.tally {
+   display: flex;
+   justify-content: space-between;
+   /* font-size: 20px; */
+}
+
+p {
+   font-size: 30px;
+   display: inline-block;
+}
+
+.selectionButtons {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
 }
 
 .questionPage {
@@ -24,11 +82,73 @@ body {
    height: 100vh;
 }
 
+.question {
+   min-height: 100px;
+   font-size: 50px;
+   background: white;
+   color: black;
+   padding: 22px;
+}
+
+/* .correct button, .wrong, .start {
+   background: white;
+} */
+
+.correct:hover, .wrong:hover{
+   background: black;
+}
+
+.fa-check {
+   color: rgb(3, 189, 3);
+}
+
+.fa-times {
+   color: rgb(200, 0, 0);
+}
+
+.start {
+   width: 100%;
+}
+
+.start:hover{
+   background: black;
+   color: white;
+}
+
+
+/* results page styling */
 .gameOver{
    background: darkcyan;
    height: 100vh;
+   padding: 10px;
 }
 
-h2 {
-   margin-top: 0;
+h3 {
+   font-size: 45px;
+   margin: 0;
 }
+
+h4 {
+   font-size: 40px;
+   margin: 30px 0;
+}
+
+.home {
+   color: black;
+}
+
+.home:hover {
+   background: black;
+   color: white;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+
+
+
+
+
