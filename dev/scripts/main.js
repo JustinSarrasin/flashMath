@@ -7,8 +7,281 @@ freakMath.score = -1;
 // starting number of questions produced
 freakMath.counter = -1;
 
+
 // lists of questions
 const results = [
+      {
+         question: "2 + 2 = 4",
+         answer: true
+      },
+      {
+         question: "10 + 4 = 14",
+         answer: true
+      },
+      {
+         question: "8 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "1 + 2 = 3",
+         answer: true
+      },
+      {
+         question: "5 + 5 = 9",
+         answer: false
+      },
+      {
+         question: "8 - 4 = 3",
+         answer: false
+      },
+      {
+         question: "4 + 2 = 6",
+         answer: true
+      },
+      {
+         question: "3 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "10 - 2 = 8",
+         answer: true
+      },
+      {
+         question: "1 - 1 = 0",
+         answer: true
+      },
+      {
+         question: "7 + 2= 9",
+         answer: true
+      },
+      {
+         question: "9 + 2 = 15",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 11",
+         answer: false
+      },
+      {
+         question: "8 + 1 = 9",
+         answer: true
+      },
+      {
+         question: "5 + 3 = 8",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 6",
+         answer: true
+      },
+      {
+         question: "10 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 12",
+         answer: true
+      },
+      {
+         question: "2 - 2 = 4",
+         answer: false
+      },
+      {
+         question: "10 + 4 = 14",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "2 + 4 = 4",
+         answer: false
+      },
+      {
+         question: "4 + 3 = 4",
+         answer: false
+      },
+      {
+         question: "8 - 2 = 6",
+         answer: true
+      },
+      {
+         question: "10 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 12",
+         answer: true
+      },
+      {
+         question: "2 + 2 = 4",
+         answer: true
+      },
+      {
+         question: "10 + 4 = 14",
+         answer: true
+      },
+      {
+         question: "8 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "2 + 1 = 4",
+         answer: false
+      },
+      {
+         question: "3 + 3 = 4",
+         answer: false
+      },
+      {
+         question: "4 + 2 = 6",
+         answer: true
+      },
+      {
+         question: "14 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "9 + 2 = 12",
+         answer: true
+      },
+      {
+         question: "15 + 2 = 11",
+         answer: false
+      },
+      {
+         question: "14 + 4 = 14",
+         answer: false
+      },
+      {
+         question: "8 + 2 = 10",
+         answer: true
+      },
+      {
+         question: "3 + 2 = 3",
+         answer: false
+      },
+      {
+         question: "5 + 4 = 9",
+         answer: true
+      },
+      {
+         question: "8 - 4 = 4",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 8",
+         answer: false
+      },
+      {
+         question: "3 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "10 - 2 = 8",
+         answer: true
+      },
+      {
+         question: "1 - 1 = 0",
+         answer: true
+      },
+      {
+         question: "7 + 2= 9",
+         answer: true
+      },
+      {
+         question: "9 + 2 = 15",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 11",
+         answer: false
+      },
+      {
+         question: "8 + 1 = 9",
+         answer: true
+      },
+      {
+         question: "5 + 3 = 8",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 6",
+         answer: true
+      },
+      {
+         question: "10 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 12",
+         answer: true
+      },
+      {
+         question: "2 - 2 = 4",
+         answer: false
+      },
+      {
+         question: "10 + 4 = 14",
+         answer: true
+      },
+      {
+         question: "4 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "2 + 4 = 4",
+         answer: false
+      },
+      {
+         question: "4 + 3 = 4",
+         answer: false
+      },
+      {
+         question: "8 - 2 = 6",
+         answer: true
+      },
+      {
+         question: "10 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "10 + 2 = 12",
+         answer: true
+      },
+      {
+         question: "2 + 2 = 4",
+         answer: true
+      },
+      {
+         question: "10 + 4 = 14",
+         answer: true
+      },
+      {
+         question: "8 + 2 = 9",
+         answer: false
+      },
+      {
+         question: "2 + 1 = 4",
+         answer: false
+      },
+      {
+         question: "3 + 3 = 4",
+         answer: false
+      },
+      {
+         question: "4 + 2 = 6",
+         answer: true
+      },
+      {
+         question: "14 + 3 = 7",
+         answer: false
+      },
+      {
+         question: "17 + 2 = 17",
+         answer: false
+      },
       {
          question: "2 + 2 = 4",
          answer: true
@@ -312,7 +585,7 @@ freakMath.questionPage = () => {
 
    freakMath.getQuestion(results[freakMath.counter].question);
    freakMath.getAnswer(results[freakMath.counter].answer)
-   })
+   })   
 }
 
 // puts question to page
@@ -389,7 +662,6 @@ freakMath.timer = () => {
    }
 }
 
-
 // add score for every correct answer
 freakMath.addScore = () => {
    freakMath.score++;
@@ -402,6 +674,8 @@ freakMath.addScore = () => {
 freakMath.toggleSound = () => {
 
 }
+
+
 
 
 // Init function

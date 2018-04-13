@@ -23,12 +23,16 @@ button {
 
 /* start page styling */
 h1{
-   font-size: 60px;
+   font-size: 70px;
+   text-shadow: 3px 3px 3px black;
 }
 
 .title h2 {
-   font-size: 40px;
-   border: 2px solid black;
+   font-size: 50px;
+   font-weight: normal;
+
+   border: 1px solid black;
+   padding: 30px 0;
    background: white;
    color: black;
    margin-top: 0;
@@ -42,6 +46,7 @@ h1{
 .startButtons button {
    background: white;
    color: black;
+   border: 1px solid black;
 }
 
 .startButtons button:hover {
