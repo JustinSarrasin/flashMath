@@ -8,9 +8,9 @@
    <title>Document</title>
 </head>
 <body>
-   <section class="startPage">
+   <section class="startPage wrapper">
       <div class="title">
-         <h2>1+1=2</h2>
+         <h2>1+1=2 ???</h2>
          <h1>Freaking Math</h1>
       </div>
    
@@ -26,7 +26,7 @@
       </div> -->
    </section>
 
-   <section class="questionPage">
+   <section id="game"class="questionPage wrapper">
       <div class="topBar">
          <button class="soundOption">🔈</button>
          <p class="runningScore"></p>
@@ -37,20 +37,21 @@
    
             </div>
             <button class="start">Start</button>
-            <input type="submit" value="correct✅" class="correct">
-            <button class="wrong">❌</button>
+            <input type="submit" value="✅" class="correct">
+            <input type="submit" class="wrong" value="❌">
          </form>
          
       </div>
    </section>
 
-   <section class="gameOver">
+   <section class="gameOver wrapper">
       <h3>Game Over</h3>
       <h5 class="runningScore"> </h5>
       <!-- <h5>Best: </h5> -->
       <div class="replayButtons">
-         <button class="playAgain">▶️</button>
-         <button class="home">⏎</button>
+         <!-- <a href=".">home</a> -->
+         <!-- <button class="playAgain"></button> -->
+         <button class="home"><a href=".">⏎</a></button>
       </div>
    </section>
 
